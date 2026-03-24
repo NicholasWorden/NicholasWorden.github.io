@@ -12,46 +12,35 @@
 
         //Creates the HTML form dynamically after 3 clicks
         function createExit() {
-            // reate question text
-            const question = document.createElement("p");
-            question.textContent = 
-                "You've clicked enough times to gain enlightenment. Do you embrace this during your ascension?";
-            document.body.appendChild(question);
+    // Question text
+    const question = document.createElement("p");
+    question.textContent =
+        "You've clicked enough times to gain enlightenment. Do you embrace this during your ascension?";
+    document.body.appendChild(question);
 
-            //Create form element
-            const form = document.createElement("form");
-            form.method = "POST";
-            form.action = "ascend.HTML";
-            form.id = "ascendForm";
+    // Container for choices
+    const container = document.createElement("div");
+    container.id = "ascendChoices";
 
-            //Group radio inputs in a fieldset
-            const fieldset = document.createElement("fieldset");
-            const legend = document.createElement("legend");
-            legend.textContent = "Ascension Choice";
-            fieldset.appendChild(legend);
+    // YES button
+    const yesBtn = document.createElement("button");
+    yesBtn.textContent = "Yes, I embrace it.";
+    yesBtn.onclick = function () {
+        handleAscend("yes");
+    };
 
-            //Add radio buttons
-            fieldset.appendChild(createRadioOption("ascendChoice", "yes", "Yes, I embrace it."));
-            fieldset.appendChild(createRadioOption("ascendChoice", "no", "No, I fear the unknown."));
-            form.appendChild(fieldset);
+    // NO button
+    const noBtn = document.createElement("button");
+    noBtn.textContent = "No, I fear the unknown.";
+    noBtn.onclick = function () {
+        handleAscend("no");
+    };
 
-            //Submit button
-            const button = document.createElement("button");
-            button.type = "submit";
-            button.textContent = "Ascend";
-            form.appendChild(button);
+    container.appendChild(yesBtn);
+    container.appendChild(noBtn);
 
-            //Validate before submitting
-            form.addEventListener("submit", function (event) {
-                const choice = document.querySelector('input[name="ascendChoice"]:checked');
-                if (!choice) {
-                    alert("You must select a choice before ascending!");
-                    event.preventDefault();
-                }
-            });
-
-            document.body.appendChild(form);
-        }
+    document.body.appendChild(container);
+}
 
         //Helper to create a radio button div
         function createRadioOption(groupName, value, labelText) {
