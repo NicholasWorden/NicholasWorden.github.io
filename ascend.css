@@ -1,0 +1,83 @@
+body {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: linear-gradient(#ffecc7, #ffd59c);
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    color: #5a3b1e;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #3f2a14;
+    text-shadow: 2px 2px 0 #f3e3c1;
+    margin-bottom: 10px;
+}
+
+#cBtn {
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.1s ease, filter 0.2s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+#cBtn:active {
+    transform: scale(0.9) rotate(-5deg);
+    filter: brightness(0.85);
+}
+
+#cocoCounter {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 10px 0 20px 0;
+    color: #4a2e15;
+}
+
+form {
+    margin-top: 30px;
+    padding: 20px;
+    background: #fff7e8;
+    border: 2px solid #e0c59b;
+    border-radius: 10px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+form div {
+    margin: 12px;
+    font-size: 1.2rem;
+}
+
+label {
+    margin-left: 6px;
+    cursor: pointer;
+}
+
+button {
+    font-size: 1.1rem;
+    background: #a06b32;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #c1874c;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+p {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #3c250f;
+}

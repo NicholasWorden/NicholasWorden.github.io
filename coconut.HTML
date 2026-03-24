@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coconut Clicker Ascension</title>
+    <link href="ascend.css" rel="stylesheet">
+    
+    <script>
+        let clicks = 0;
+        let ready = true;
+
+        //Creates the HTML form dynamically after 3 clicks
+        function createExit() {
+            // reate question text
+            const question = document.createElement("p");
+            question.textContent = 
+                "You've clicked enough times to gain enlightenment. Do you embrace this during your ascension?";
+            document.body.appendChild(question);
+
+            //Create form element
+            const form = document.createElement("form");
+            form.method = "POST";
+            form.action = "ascend.php";
+            form.id = "ascendForm";
+
+            //Group radio inputs in a fieldset
+            const fieldset = document.createElement("fieldset");
+            const legend = document.createElement("legend");
+            legend.textContent = "Ascension Choice";
+            fieldset.appendChild(legend);
+
+            //Add radio buttons
+            fieldset.appendChild(createRadioOption("ascendChoice", "yes", "Yes, I embrace it."));
+            fieldset.appendChild(createRadioOption("ascendChoice", "no", "No, I fear the unknown."));
+            form.appendChild(fieldset);
+
+            //Submit button
+            const button = document.createElement("button");
+            button.type = "submit";
+            button.textContent = "Ascend";
+            form.appendChild(button);
+
+            //Validate before submitting
+            form.addEventListener("submit", function (event) {
+                const choice = document.querySelector('input[name="ascendChoice"]:checked');
+                if (!choice) {
+                    alert("You must select a choice before ascending!");
+                    event.preventDefault();
+                }
+            });
+
+            document.body.appendChild(form);
+        }
+
+        //Helper to create a radio button div
+        function createRadioOption(groupName, value, labelText) {
+            const div = document.createElement("div");
+
+            const radio = document.createElement("input");
+            radio.type = "radio";
+            radio.name = groupName;
+            radio.value = value;
+            radio.id = value;
+
+            const label = document.createElement("label");
+            label.htmlFor = value;
+            label.textContent = labelText;
+
+            div.appendChild(radio);
+            div.appendChild(label);
+
+            return div;
+        }
+
+        //Click handler for the coconut image
+        function clickFunction() {
+            const counter = document.getElementById("cocoCounter");
+            clicks += 1;
+            counter.textContent = "Coconuts clicked: " + clicks;
+
+            if (clicks > 3 && ready) {
+                ready = false;
+                createExit();
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Coconut Clicker</h1>
+
+    <p>Click this coconut to begin your spiritual journey.</p>
+    <p id="cocoCounter">Coconuts clicked: 0</p>
+
+    <img 
+        id="cBtn" 
+        src="coconut.png" 
+        alt="Clickable coconut"
+        onclick="clickFunction()">
+</body>
+</html>
