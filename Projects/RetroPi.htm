@@ -1,51 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-	<head>
-	<title>NW | RetroPie</title>
-		<meta charset = "utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-	</head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NW | RetroPie</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
 
-	<body style="background-color:black">
+<body>
 
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="../index.htm">Home</a>
+            <a href="../Projects.htm">Projects</a>
+            <a href="../AboutMe.htm">About Me</a>
+            <a href="../Misc.htm">Misc.</a>
+        </div>
+    </nav>
 
-		<p style="font-family:verdana;color:white; font-size:14px; text-align:right; margin-right:40px">
-			<a style="text-decoration:none; color:white"; href="https://NicholasWorden.github.io/index.htm">Home</a> |
-			<a style="text-decoration:none; color:white"; href="https://NicholasWorden.github.io/Projects.htm">Projects</a> |
-			<a style="text-decoration:none; color:white"; href="https://NicholasWorden.github.io/AboutMe.htm">About Me</a> |
-			<a style="text-decoration:none; color:white"; href="https://NicholasWorden.github.io/Misc.htm">Misc.</a>
-		</p>
+    <main class="container center">
 
-		<hr style ="width:100vw;"></hr>
+        <h1>The RetroPie Console</h1>
 
-		<div style="text-align: center;font-family:'Times New Roman', Times, serif">
+        <p class="subtitle">
+            A descent into madness.
+        </p>
 
+        <img src="https://i.imgur.com/f6DOiwD.jpeg" 
+             alt="Fat finger boy holding a small computer" 
+             class="project-image">
 
-		<h3 style="font-family:verdana;font-size:24px; color:white;margin:1.5vw;">The RetroPie Console</h3>
-		<p style="font-family:verdana;font-size:16px; color:white;margin:25px; text-align:center;">
-			A descent into madness.<br><br>
-		</p>
+        <section class="content">
 
+            <p>
+                Over my midterm break I decided to use a Rasberry Pi to create a retro console using the RetroPie Freeware. It consisted of a functioning power button, numerous NES games such as Final Fantasy and Fire Emblem, and a functioning emulator to play said games. This was in part done to have something to do during my second semester of college, and learn the basics of hardware and software interactions. Below is the documentation of my process.
+            </p>
 
-		<p style="text-align:right;margin:auto ;font-size:2vw;font:verdana;color:rgb(0, 0, 0);margin:auto;"><b> Super Hidden Text</b></p>
-		
-		<hr style ="width:50vw;margin:auto;"></hr>
-		
-		<img  src = "https://i.imgur.com/f6DOiwD.jpeg" alt = "Fat finger boy holding a small computer" style ="width:50vw;height:6.5vw;"></img><br>
+            <p>
+                Hardly anything went as planned. Firstly, I didn't do nearly enough research into the type of software required to do a basic install of RetroPie onto the computer. At the time of writing this, the software could only do basic installs on early models.
+            </p>
 
-		<p style="font-family:verdana;font-size:16px; color:white;margin:auto;text-align:center;width:50vw;height:6.5vw;">
-			
-			Over my midterm break I decided to use a Rasberry Pi to create a retro console using the RetroPie Freeware. It consisted of a functioning power button, numerous NES games such as Final Fantasy and Fire Emblem, and a functioning emulator to play said games. This was in part done to have something to do during my second semester of college, and learn the basics of hardware and software interactions. Below is the documentation of my process.<br><br>
-			Hardly anything went as planned. Firstly, I didn't do nearly enough research into the type of software required to do a basic install of RetroPie onto the computer. At the time of writing this, the software could only do basic installs on early models. <br>
-			But perhaps in my hubris, or merely ignorance, I bought the Rasberry Pi 5. This created some setbacks, as a version of RetroPie wasn't yet made specifically for that hardware. However, not all hope was lost. After some extensive research (half way down page one of google)<br>
-			I had discovered that RetroPie could infact run on my hardware, but it would take some extra work. Firstly I had to do a manual installation of RetroPie on top of the Rasberry OS. I was doing just as I was told by the internet until I hit a snag.<br>
-			You see, dear reader, the RasberryPi OS I was using was incapable of being overwritten. So, after even more research (page two of google) I figured out that I'd have to use the "Lite" variation of the Rasberry OS. But yet again my ignorance blinded my march towards completion.<br>
-			As I continued down the documentation detailing the process I'd need to complete this project, I hit a similar snag I hit earlier with the standard OS. I was failing to upload the required files needed to impliment RetroPie. So in desperation, I wiped the system, installed the previous OS, and still encountered the same error.<br>
-			After a quick glance back to google, I learned that the Lite OS didn't automatically connect to the internet, and that I had to connect it manually so that my uploads would work. Had I known this before hand I could have saved myself the anguish of having to spend an hour troubleshooting.<br><br>
-			Let this be a lesson to all who hear of this tale, that a minute saved by taking a shortcut it one spent finding your way back to the path.
+            <p>
+                But perhaps in my hubris, or merely ignorance, I bought the Rasberry Pi 5. This created some setbacks, as a version of RetroPie wasn't yet made specifically for that hardware. However, not all hope was lost. After some extensive research (half way down page one of google)
+            </p>
 
-		</p>
-		</div>
-	</body>
+            <p>
+                I had discovered that RetroPie could infact run on my hardware, but it would take some extra work. Firstly I had to do a manual installation of RetroPie on top of the Rasberry OS. I was doing just as I was told by the internet until I hit a snag.
+            </p>
+
+            <p>
+                You see, dear reader, the RasberryPi OS I was using was incapable of being overwritten. So, after even more research (page two of google) I figured out that I'd have to use the "Lite" variation of the Rasberry OS. But yet again my ignorance blinded my march towards completion.
+            </p>
+
+            <p>
+                As I continued down the documentation detailing the process I'd need to complete this project, I hit a similar snag I hit earlier with the standard OS. I was failing to upload the required files needed to impliment RetroPie. So in desperation, I wiped the system, installed the previous OS, and still encountered the same error.
+            </p>
+
+            <p>
+                After a quick glance back to google, I learned that the Lite OS didn't automatically connect to the internet, and that I had to connect it manually so that my uploads would work. Had I known this before hand I could have saved myself the anguish of having to spend an hour troubleshooting.
+            </p>
+
+            <p>
+                Let this be a lesson to all who hear of this tale, that a minute saved by taking a shortcut it one spent finding your way back to the path.
+            </p>
+
+        </section>
+
+    </main>
+
+</body>
 </html>
