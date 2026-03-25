@@ -1,42 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-	<head>
-	<title>NW | Projects</title>
-		<meta charset = "utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-	</head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NW | Projects</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-	<body style="background-color:black">
+<body>
 
-		<div style="text-align: center;font-size:18px;margin: auto;">
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="index.htm">Home</a>
+            <a href="Projects.htm" class="active">Projects</a>
+            <a href="Misc.htm">Misc.</a>
+        </div>
+    </nav>
 
+    <main class="container center">
 
-			<p style="font-family:verdana;color:white; font-size:14px; text-align:right; margin-right:40px">
-				<a style="text-decoration:none; color:white"; href="https://NicholasWorden.github.io/index.htm">Home</a> |
-				<a style="text-decoration:none; color:white"; href="https://NicholasWorden.github.io/Projects.htm">Projects</a> |
-				<a style="text-decoration:none; color:white"; href="https://NicholasWorden.github.io/AboutMe.htm">About Me</a> |
-				<a style="text-decoration:none; color:white"; href="https://NicholasWorden.github.io/Misc.htm">Misc.</a>
-			</p>
-		<hr style ="width:100%;"></hr>
+        <h1>Projects</h1>
 
-		<h3 style="font-family:verdana;font-size:24px; color:white;margin:auto;">Projects</h3>
-		<p style="font-family:verdana;font-size:16px; color:white;margin:auto;">
-			A collection of personal projects that I feel are impressive enough to showcase.<br>Mostly games and software.<br>
-		</p>
+        <p class="subtitle">
+            A collection of projects I feel are worth showcasing.
+            <br>
+            Mostly games and software.
+        </p>
 
-		<p style="text-align:right;margin-right:2.5% ;font-size:2vw;font:verdana;color:rgb(0, 0, 0);margin-bottom:0;"><b> Super hidden text</b></p>
-		
-		<hr style ="width:50vw;"></hr>
+        <div class="project-list">
 
-		<a href="https://NicholasWorden.github.io/Projects/NoJumpKing.htm"><img  src = "https://i.imgur.com/1qiXMaF.png" alt = "No Jump King game logo" style =" width:50vw;height: 6.5vw; "></a>
+            <a href="Projects/NoJumpKing.htm" class="project-card">
+                <img src="https://i.imgur.com/1qiXMaF.png" alt="No Jump King">
+            </a>
 
-		<a href="https://NicholasWorden.github.io/Projects/MyWebsite.htm"><img src="https://i.imgur.com/cOv1aR0.png"; alt=""; style="width:50vw;height:6.5vw; margin:auto"></a>
+            <a href="Projects/MyWebsite.htm" class="project-card">
+                <img src="https://i.imgur.com/cOv1aR0.png" alt="My Website">
+            </a>
 
-		<a href="https://NicholasWorden.github.io/Projects/RetroPi.htm"><img src="https://i.imgur.com/f6DOiwD.jpeg"; alt=""; style="width:50vw;height:6.5vw; margin:auto"></a>
+            <a href="Projects/RetroPi.htm" class="project-card">
+                <img src="https://i.imgur.com/f6DOiwD.jpeg" alt="RetroPi">
+            </a>
 
-		<a href="https://NicholasWorden.github.io/Projects/4x4WordPuzzleSolver.htm"><img src="https://i.imgur.com/mCNPzUB.png"; alt=""; style="width:50vw;height:6.5vw; margin:auto"></a>
+            <a href="Projects/4x4WordPuzzleSolver.htm" class="project-card">
+                <img src="https://i.imgur.com/mCNPzUB.png" alt="Word Puzzle Solver">
+            </a>
 
-		</div>
-	</body>
+        </div>
+
+    </main>
+
+</body>
 </html>

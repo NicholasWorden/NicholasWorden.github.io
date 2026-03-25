@@ -1,38 +1,44 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NW | Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-	<head>
-		<meta charset = "utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>NW | Home</title>
-	</head>
-	<body style="background-color:black">
-		
+<body>
 
-		<p style="font-family:verdana;color:white; font-size:14px; text-align:right; margin-right:40px">
-			<a style="text-decoration:none; color:white"; href="https://NicholasWorden.github.io/index.htm">Home</a> |
-			<a style="text-decoration:none; color:white"; href="https://NicholasWorden.github.io/Projects.htm">Projects</a> |
-			<a style="text-decoration:none; color:white"; href="https://NicholasWorden.github.io/AboutMe.htm">About Me</a> |
-			<a style="text-decoration:none; color:white"; href="https://NicholasWorden.github.io/Misc.htm">Misc.</a>
-		</p>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="index.htm" class="active">Home</a>
+            <a href="Projects.htm">Projects</a>
+            <a href="Misc.htm">Misc.</a>
+        </div>
+    </nav>
 
-		<hr style ="width:100%;"></hr>
+    <main class="container center">
 
-		<div style="text-align: center;font-family:'Times New Roman', Times, serif">
+        <h1>Welcome to my website</h1>
 
-		<h3 style="font-size:3vw; color:white;margin:1.5vw;">Welcome to my website</h3>
-		<p style="font-size:1.6vwpx; color:white;margin:auto; text-align:center;">
-			On this site, I journal and catalog the going-ons of my life.<br>Namely projects, literature, and other curiosities.<br>
-		</p>
+        <p class="subtitle">
+            On this site, I document personal projects and whatever else I find interesting.
+        </p>
 
-		<p style="text-align:center;margin-right:2.5% ;font-size:2vw;color:white;margin-bottom:0;"><b>Featured Articles</b></p>
-		
-			<hr style ="width:50vw;margin: auto;"></hr>
-			<a href="https://NicholasWorden.github.io/Projects/NoJumpKing.htm"><img src="https://i.imgur.com/1qiXMaF.png"; alt=""; style="width:50vw;height:6.5vw;margin-top:.5vw"></a>
+        <h2 class="section-title">Featured Projects</h2>
 
-			<a href="https://NicholasWorden.github.io/Projects/MyWebsite.htm"><img src="https://i.imgur.com/cOv1aR0.png"; alt=""; style="width:50vw;height:6.5vw; margin-top:.5vw;"></a>
-		</div>
-	</body>
+        <div class="project-list">
+            <a href="Projects/NoJumpKing.htm" class="project-card">
+                <img src="https://i.imgur.com/1qiXMaF.png" alt="No Jump King">
+            </a>
 
+            <a href="Projects/MyWebsite.htm" class="project-card">
+                <img src="https://i.imgur.com/cOv1aR0.png" alt="My Website">
+            </a>
+        </div>
+
+    </main>
+
+</body>
 </html>
