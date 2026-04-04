@@ -96,7 +96,8 @@ p {
 .project-card img {
     width: 100%;
     max-width: 700px;
-    height: auto;
+    height: 100%;
+    max-height: 400px;
     border: 1px solid #333;
     transition: transform 0.2s ease, border-color 0.2s ease;
 }
